@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELORA — Premium Marketplace</title>
+  <meta name="description" content="VELORA premium modern e-commerce marketplace.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span><i class="bi bi-lightning-charge-fill"></i> PRIVATE SALE — UP TO 40% OFF SELECTED ITEMS</span>
+    <span class="d-none d-md-block">Complimentary delivery on orders over $75</span>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg main-nav sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">VEL<span>O</span>RA</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="search-wrap mx-lg-4 my-3 my-lg-0">
+        <i class="bi bi-search"></i>
+        <input id="searchInput" type="search" placeholder="Search products, brands & categories...">
+      </div>
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#collections">Collections</a></li>
+        <li><a class="nav-link" href="#shop">Shop</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li>
+          <button class="nav-icon" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
+            <i class="bi bi-bag"></i><b id="cartCount">0</b>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+      <button data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+      <button data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1800&q=85" alt="Premium electronics">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">THE MODERN EDIT / 01</p>
+          <h1>Elevate your<br><em>everyday.</em></h1>
+          <p>Curated essentials designed around quality, function and timeless style.</p>
+          <a href="#shop" class="btn btn-gold">Explore Collection <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=85" alt="Luxury fashion store">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">NEW SEASON / 02</p>
+          <h1>Made to<br><em>stand out.</em></h1>
+          <p>Discover refined pieces selected for a sharper, more confident lifestyle.</p>
+          <a href="#collections" class="btn btn-gold">View Collections <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85" alt="Premium clothing">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">SIGNATURE PICKS / 03</p>
+          <h1>Less noise.<br><em>More taste.</em></h1>
+          <p>A premium shopping experience built for people who value the details.</p>
+          <a href="#shop" class="btn btn-gold">Shop Now <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="trust-strip">
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-md-3 trust-item"><i class="bi bi-box-seam"></i><div><strong>Fast Delivery</strong><small>Across the country</small></div></div>
+      <div class="col-md-3 trust-item"><i class="bi bi-shield-check"></i><div><strong>Secure Checkout</strong><small>Protected payments</small></div></div>
+      <div class="col-md-3 trust-item"><i class="bi bi-arrow-repeat"></i><div><strong>Easy Returns</strong><small>14-day return policy</small></div></div>
+      <div class="col-md-3 trust-item"><i class="bi bi-headset"></i><div><strong>Human Support</strong><small>Here when you need us</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="collections" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow dark">SHOP BY EDIT</span><h2>Curated collections</h2></div>
+      <a href="#shop" class="text-link">View all <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+    <div class="collection-grid">
+      <button class="collection-card c1" onclick="filterProducts('Electronics')"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85"><span>01 / ELECTRONICS</span><h3>Tech Essentials</h3></button>
+      <button class="collection-card c2" onclick="filterProducts('Fashion')"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"><span>02 / FASHION</span><h3>Modern Wardrobe</h3></button>
+      <button class="collection-card c3" onclick="filterProducts('Home')"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85"><span>03 / HOME</span><h3>Living Edit</h3></button>
+      <button class="collection-card c4" onclick="filterProducts('Accessories')"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=85"><span>04 / ACCESSORIES</span><h3>Finishing Touches</h3></button>
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="section shop-section">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow dark">THE SELECTION</span><h2>Featured products</h2></div>
+      <div class="filters">
+        <button class="filter active" onclick="filterProducts('All',this)">All</button>
+        <button class="filter" onclick="filterProducts('Electronics',this)">Electronics</button>
+        <button class="filter" onclick="filterProducts('Fashion',this)">Fashion</button>
+        <button class="filter" onclick="filterProducts('Home',this)">Home</button>
+        <button class="filter" onclick="filterProducts('Accessories',this)">Accessories</button>
+      </div>
+    </div>
+    <div class="row g-4" id="productGrid">
+
+      <div class="col-6 col-lg-3 product-item" data-category="Electronics" data-name="Aero Wireless Headphones">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-25%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://pakistanstore.pk/wp-content/uploads/2026/03/Aspor-A633-ANC-Bluetooth-Headphones.jpg" alt="Wireless headphones"></div>
+          <div class="product-info"><small>ELECTRONICS</small><h3>Aero Wireless Headphones</h3><div class="rating">★★★★★ <span>(128)</span></div><div class="price">$74 <del>$99</del></div><button class="add-btn" onclick="addToCart('Aero Wireless Headphones',74)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="Electronics" data-name="Minimal Smart Watch">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_qldc1BgSgo4EgBqKK1N_2iPsw-O9M3zLv8mxaBTW_A&s=10" alt="Smart watch"></div>
+          <div class="product-info"><small>ELECTRONICS</small><h3>Minimal Smart Watch</h3><div class="rating">★★★★★ <span>(94)</span></div><div class="price">$119 <del>$149</del></div><button class="add-btn" onclick="addToCart('Minimal Smart Watch',119)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="Fashion" data-name="Signature Leather Jacket">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-30%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=85" alt="Leather jacket"></div>
+          <div class="product-info"><small>FASHION</small><h3>Signature Leather Jacket</h3><div class="rating">★★★★★ <span>(76)</span></div><div class="price">$139 <del>$199</del></div><button class="add-btn" onclick="addToCart('Signature Leather Jacket',139)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="Fashion" data-name="Court Classic Sneakers">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPPa2dK_yT5_OyG2c-eqv1K4QofWkigdP4yyBCq-P7ZQ&s=10" alt="Sneakers"></div>
+          <div class="product-info"><small>FASHION</small><h3>Court Classic Sneakers</h3><div class="rating">★★★★★ <span>(212)</span></div><div class="price">$89 <del>$115</del></div><button class="add-btn" onclick="addToCart('Court Classic Sneakers',89)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="Home" data-name="Arc Sculptural Lamp">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-20%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=85" alt="Modern lamp"></div>
+          <div class="product-info"><small>HOME</small><h3>Arc Sculptural Lamp</h3><div class="rating">★★★★★ <span>(61)</span></div><div class="price">$79 <del>$99</del></div><button class="add-btn" onclick="addToCart('Arc Sculptural Lamp',79)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="Home" data-name="Oak Lounge Chair">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGWraNM8ZM_QCJjeL7SaGVVqPuqJQy5UFy7b6KFUoy9Q&s=10" alt="Lounge chair"></div>
+          <div class="product-info"><small>HOME</small><h3>Oak Lounge Chair</h3><div class="rating">★★★★★ <span>(42)</span></div><div class="price">$249 <del>$299</del></div><button class="add-btn" onclick="addToCart('Oak Lounge Chair',249)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="Accessories" data-name="Chrono Steel Watch">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-18%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB31UAS99kj2l-zetc6UClFY_XYzhrcIklRxVLqVRQoA&s=10" alt="Steel watch"></div>
+          <div class="product-info"><small>ACCESSORIES</small><h3>Chrono Steel Watch</h3><div class="rating">★★★★★ <span>(87)</span></div><div class="price">$129 <del>$158</del></div><button class="add-btn" onclick="addToCart('Chrono Steel Watch',129)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3 product-item" data-category="Accessories" data-name="Noir Signature Sunglasses">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-15%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRabaL_NUuwfWhmeK5wwoOLqdmvYHuBjwTyTFWDkkv56w&s=10" alt="Sunglasses"></div>
+          <div class="product-info"><small>ACCESSORIES</small><h3>Noir Signature Sunglasses</h3><div class="rating">★★★★★ <span>(133)</span></div><div class="price">$68 <del>$80</del></div><button class="add-btn" onclick="addToCart('Noir Signature Sunglasses',68)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+
+
+      <div class="col-6 col-lg-3 product-item" data-category="Electronics" data-name="Studio Bluetooth Speaker">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=85" alt="Bluetooth speaker"></div>
+          <div class="product-info"><small>ELECTRONICS</small><h3>Studio Bluetooth Speaker</h3><div class="rating">★★★★★ <span>(88)</span></div><div class="price">$92 <del>$120</del></div><button class="add-btn" onclick="addToCart('Studio Bluetooth Speaker',92)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Electronics" data-name="Ultra HD Action Camera">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-22%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=85" alt="Camera"></div>
+          <div class="product-info"><small>ELECTRONICS</small><h3>Ultra HD Action Camera</h3><div class="rating">★★★★★ <span>(57)</span></div><div class="price">$179 <del>$229</del></div><button class="add-btn" onclick="addToCart('Ultra HD Action Camera',179)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Fashion" data-name="Premium Oversized Hoodie">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-20%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bUs4llS3zQXlaLBBrcSJiPlNc8Q_OuYmOKptvxYQCw&s=10" alt="Hoodie"></div>
+          <div class="product-info"><small>FASHION</small><h3>Premium Oversized Hoodie</h3><div class="rating">★★★★★ <span>(141)</span></div><div class="price">$64 <del>$80</del></div><button class="add-btn" onclick="addToCart('Premium Oversized Hoodie',64)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Fashion" data-name="Classic Oxford Shirt">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPHEoXiX1lXk-g4Tzfhs2CLdH1VYpVNXd-Z-b1cHor0A&s=10" alt="Oxford shirt"></div>
+          <div class="product-info"><small>FASHION</small><h3>Classic Oxford Shirt</h3><div class="rating">★★★★★ <span>(73)</span></div><div class="price">$58 <del>$75</del></div><button class="add-btn" onclick="addToCart('Classic Oxford Shirt',58)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Home" data-name="Linen Accent Sofa">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-16%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1YEoRfSmkZZVPQSqxnqf3ZGd44z4gWXoMKPQutQz0lA&s=10" alt="Sofa"></div>
+          <div class="product-info"><small>HOME</small><h3>Linen Accent Sofa</h3><div class="rating">★★★★★ <span>(35)</span></div><div class="price">$419 <del>$499</del></div><button class="add-btn" onclick="addToCart('Linen Accent Sofa',419)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Home" data-name="Ceramic Table Set">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1DpDxESOlX2pA78N8T8GezSjwbcwWvWPwmyMlw1UCMw&s=10" alt="Ceramic tableware"></div>
+          <div class="product-info"><small>HOME</small><h3>Ceramic Table Set</h3><div class="rating">★★★★★ <span>(64)</span></div><div class="price">$54 <del>$68</del></div><button class="add-btn" onclick="addToCart('Ceramic Table Set',54)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Accessories" data-name="Leather Travel Bag">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-24%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmSJpfICkhVS4deh3_tbJr_T6qObZHyWw4Fg7m5UTjaA&s=10" alt="Leather travel bag"></div>
+          <div class="product-info"><small>ACCESSORIES</small><h3>Leather Travel Bag</h3><div class="rating">★★★★★ <span>(102)</span></div><div class="price">$114 <del>$149</del></div><button class="add-btn" onclick="addToCart('Leather Travel Bag',114)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Accessories" data-name="Aviator Metal Frame">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU8EWP7BADY4LRza1F5ZnmUbW4w0vNAMHQiQuJ-eJIuQ&s=10" alt="Aviator sunglasses"></div>
+          <div class="product-info"><small>ACCESSORIES</small><h3>Aviator Metal Frame</h3><div class="rating">★★★★★ <span>(91)</span></div><div class="price">$72 <del>$90</del></div><button class="add-btn" onclick="addToCart('Aviator Metal Frame',72)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Electronics" data-name="Mechanical Keyboard Pro">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-17%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUwaU7hMcMz7qC3enRL42eg6dxH_dy5Cg4Q31cQMY9Fw&s=10" alt="Mechanical keyboard"></div>
+          <div class="product-info"><small>ELECTRONICS</small><h3>Mechanical Keyboard Pro</h3><div class="rating">★★★★★ <span>(119)</span></div><div class="price">$99 <del>$119</del></div><button class="add-btn" onclick="addToCart('Mechanical Keyboard Pro',99)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Fashion" data-name="Urban Cargo Trousers">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-19%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIirENczXMMahB68eFu_snGWKpIFTrvzJxGSTxd0eyrg&s=10" alt="Fashion trousers"></div>
+          <div class="product-info"><small>FASHION</small><h3>Urban Cargo Trousers</h3><div class="rating">★★★★★ <span>(69)</span></div><div class="price">$67 <del>$83</del></div><button class="add-btn" onclick="addToCart('Urban Cargo Trousers',67)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Home" data-name="Minimal Wall Mirror">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-sale">-21%</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=85" alt="Wall mirror"></div>
+          <div class="product-info"><small>HOME</small><h3>Minimal Wall Mirror</h3><div class="rating">★★★★★ <span>(51)</span></div><div class="price">$89 <del>$113</del></div><button class="add-btn" onclick="addToCart('Minimal Wall Mirror',89)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+      <div class="col-6 col-lg-3 product-item" data-category="Accessories" data-name="Premium Card Holder">
+        <article class="product-card">
+          <div class="product-image"><span class="badge-new">NEW</span><button class="heart" onclick="toggleWish(this)"><i class="bi bi-heart"></i></button><img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=85" alt="Card holder"></div>
+          <div class="product-info"><small>ACCESSORIES</small><h3>Premium Card Holder</h3><div class="rating">★★★★★ <span>(47)</span></div><div class="price">$39 <del>$49</del></div><button class="add-btn" onclick="addToCart('Premium Card Holder',39)"><i class="bi bi-bag-plus"></i> Add to bag</button></div>
+        </article>
+      </div>
+    </div>
+    <div id="noResults" class="no-results d-none">No products matched your search.</div>
+  </div>
+</section>
+
+<section class="editorial">
+  <div class="container">
+    <div class="editorial-box">
+      <div>
+        <span class="eyebrow">VELORA PRIVATE EDIT</span>
+        <h2>Good design is<br><em>always in season.</em></h2>
+        <p>From everyday technology to statement pieces, discover products selected to make your space and style feel considered.</p>
+        <a href="#shop" class="btn btn-outline-light">Explore the edit <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1200&q=85" alt="Premium workspace">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6"><img class="about-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85" alt="Shopping experience"></div>
+      <div class="col-lg-6">
+        <span class="eyebrow dark">WHY VELORA</span>
+        <h2>A better way to shop.</h2>
+        <p class="lead">We keep the experience simple: fewer distractions, better products and transparent prices.</p>
+        <div class="about-points">
+          <div><span>01</span><p><strong>Curated, not crowded.</strong><br>Every collection is built around useful, considered products.</p></div>
+          <div><span>02</span><p><strong>Quality comes first.</strong><br>We focus on products that look good and work beautifully.</p></div>
+          <div><span>03</span><p><strong>Made for real life.</strong><br>Fast delivery, easy returns and responsive support.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="newsletter">
+  <div class="container text-center">
+    <span class="eyebrow">THE VELORA LETTER</span>
+    <h2>Stay in the know.</h2>
+    <p>New arrivals, private offers and curated picks — delivered occasionally.</p>
+    <form id="newsletterForm" class="newsletter-form">
+      <input id="email" type="email" placeholder="Your email address" required>
+      <button class="btn btn-gold" type="submit">Subscribe <i class="bi bi-arrow-right"></i></button>
+    </form>
+    <small id="formMsg"></small>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-5"><a class="footer-logo" href="#home">VEL<span>O</span>RA</a><p class="footer-copy">A modern marketplace for products worth keeping. Designed with a focus on quality, clarity and effortless shopping.</p></div>
+      <div class="col-6 col-lg-2"><h5>Shop</h5><a href="#shop">All Products</a><a href="#collections">Collections</a><a href="#shop">New Arrivals</a><a href="#shop">Best Sellers</a></div>
+      <div class="col-6 col-lg-2"><h5>Company</h5><a href="#about">About Us</a><a href="#contact">Contact</a><a href="#contact">Support</a><a href="#contact">Returns</a></div>
+      <div class="col-lg-3"><h5>Follow</h5><div class="socials"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-youtube"></i></a></div><p class="mt-4 small">support@velora.store<br>+1 800 555 0198</p></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 VELORA. All rights reserved.</span><span>Privacy · Terms · Shipping</span></div>
+  </div>
+</footer>
+
+<div class="offcanvas offcanvas-end cart-panel" tabindex="-1" id="cartPanel">
+  <div class="offcanvas-header"><div><span class="eyebrow dark">YOUR BAG</span><h4 class="mb-0">Shopping bag</h4></div><button class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom mt-auto">
+      <div class="d-flex justify-content-between mb-3"><span>Subtotal</span><strong id="cartTotal">$0</strong></div>
+      <button class="btn btn-dark w-100 py-3" onclick="checkout()">Proceed to checkout <i class="bi bi-arrow-right"></i></button>
+      <small class="d-block text-center mt-3 text-muted">Taxes and delivery calculated at checkout.</small>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast" class="toast" role="alert"><div class="toast-body"><i class="bi bi-check-circle-fill"></i> <span id="toastText">Added to your bag.</span></div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
